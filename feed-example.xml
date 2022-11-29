@@ -1,4 +1,4 @@
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:ncts="http://ns.electronichealth.net.au/ncts/syndication/asf/extensions/1.0.0" xmlns:sct="x">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:ncts="http://ns.electronichealth.net.au/ncts/syndication/asf/extensions/1.0.0" xmlns:sct="http://snomed.info/syndication/ncst-extension/1.0.0">
     <title>SNOMED International Terminology Service Syndication Feed</title>
     <link rel="alternate" type="application/atom+xml" href="https://api.snomed.org/syndication/v1/syndication.xml" />
     <id>urn:uuid:34fabee6-f2b1-44e4-9164-7ae0efc7d6ad</id>
@@ -22,7 +22,6 @@
         <ncts:contentItemIdentifier>http://snomed.info/sct/900000000000207008</ncts:contentItemIdentifier>
         <ncts:contentItemVersion>http://snomed.info/sct/900000000000207008/version/20220731</ncts:contentItemVersion>
         <sct:packageDependency>
-            <sct:editionDependency></sct:editionDependency>
         </sct:packageDependency>
     </entry>
     <entry>
@@ -43,7 +42,7 @@
         <ncts:contentItemVersion>http://snomed.info/sct/450829007/version/20221031</ncts:contentItemVersion>
         <sct:packageDependency>
             <sct:editionDependency>http://snomed.info/sct/900000000000207008/version/20220731</sct:editionDependency>
-            <sct:derivateDependency></sct:derivateDependency>
+            <sct:derivativeDependency>http://snomed.info/sct/816211006/version/20220131 </sct:derivativeDependency>
         </sct:packageDependency>
     </entry>
 </feed>
