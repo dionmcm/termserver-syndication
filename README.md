@@ -1,10 +1,12 @@
-# Terminology Server Syndication Standard
+# Terminology Server Syndication Standard - DRAFT
+
+**Everything here is currently draft and should not be considered to be agreed as a standard nor should it be implemented yet**
 
 As part of a strategy to move towards wider adoption of healthcare terminology servers which implement the HL7 FHIR Terminology Services x, a more effective way of distributing terminology would be from server to server through a syndication feed.
 
 Based on existing work implemented by the [Australian Digital Health Agency](https://www.healthterminologies.gov.au/specs/v2/conformant-server-apps/syndication-api/syndication-feed/), this feed extends the [Atom Syndication Standard](https://tools.ietf.org/html/rfc4287). It is not specific to SNOMED CT and can be used for any relevant healthcare standard,
 
-The additions here are from SNOMED International and are in the sct namespace for distributing SNOMED CT content. 
+The additions here are from SNOMED International and are in the sct namespace, http://snomed.info/syndication/sct-extension/1.0.0, for distributing SNOMED CT content. 
 
 ## Details
 
@@ -41,6 +43,5 @@ Automatic import of selected products and dependencies as updates become availab
 
 - Automatic update of existing terminology server instances
   - Browser server containing both published content and daily builds
-
 - Automatic provision of new terminology server instances
   - Autoscaling

@@ -1,4 +1,4 @@
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:ncts="http://ns.electronichealth.net.au/ncts/syndication/asf/extensions/1.0.0" xmlns:sct="http://snomed.info/syndication/ncst-extension/1.0.0">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:ncts="http://ns.electronichealth.net.au/ncts/syndication/asf/extensions/1.0.0" xmlns:sct="http://snomed.info/syndication/sct-extension/1.0.0">
     <title>SNOMED International Terminology Service Syndication Feed</title>
     <link rel="alternate" type="application/atom+xml" href="https://api.snomed.org/syndication/v1/syndication.xml" />
     <id>urn:uuid:34fabee6-f2b1-44e4-9164-7ae0efc7d6ad</id>
