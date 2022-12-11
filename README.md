@@ -2,7 +2,7 @@
 
 **Everything here is currently draft and should not be considered to be agreed as a standard nor should it be implemented yet**
 
-As part of a strategy to move towards wider adoption of healthcare terminology servers which implement the HL7 FHIR Terminology Services x, a more effective way of distributing terminology would be from server to server through a syndication feed.
+As part of a strategy to move towards wider adoption of healthcare terminology servers which implement the HL7 FHIR Terminology Services, a more effective way of distributing terminology would be from server to server through a syndication feed.
 
 Based on existing work implemented by the [Australian Digital Health Agency](https://www.healthterminologies.gov.au/specs/v2/conformant-server-apps/syndication-api/syndication-feed/), this feed extends the [Atom Syndication Standard](https://tools.ietf.org/html/rfc4287). It is not specific to SNOMED CT and can be used for any relevant healthcare standard,
 
@@ -21,7 +21,7 @@ The extensions to the specification are as follows:
 </sct:packageDependency>
 ```
 
-These are SNOMED CT specific extensions to dictate any package dependency for a given release package. DDependencies an be on **editions** or other **derivatives**.
+These are SNOMED CT specific extensions to dictate any package dependency for a given release package. Dependencies can be on **editions** or other **derivatives**.
 
 - **sct:editionDependency** states any necessary edition dependency and version using the SNOMED CT URI standard, e.g. `http://snomed.info/sct/900000000000207008/version/20220731`. It can have an empty value when there is no dependency as with the International Edition. Where there are multiple edition dependencies, only put the **next** dependency. Downloading packages would complete when there are no further dependencies.
 - **sct:derivativeDependency** states any necessary derivative dependency, as they are often published outside of SNOMED CT editions. Similarly, this should also follow the SNOMED CT URI standard for module and version
