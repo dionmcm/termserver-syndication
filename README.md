@@ -21,9 +21,16 @@ The extensions to the specification are as follows:
 </sct:packageDependency>
 ```
 
-These are SNOMED CT specific extensions to dictate any package dependency for a given release package. DDependencies an be on **editions** or other **derivatives**.
+These are SNOMED CT specific extensions to specify any package dependency for a given release package that are not included in the package itself. Dependencies can be on **editions** or other **derivatives**.
 
-- **sct:editionDependency** states any necessary edition dependency and version using the SNOMED CT URI standard, e.g. `http://snomed.info/sct/900000000000207008/version/20220731`. It can have an empty value when there is no dependency as with the International Edition. Where there are multiple edition dependencies, only put the **next** dependency. Downloading packages would complete when there are no further dependencies.
+[Edition packages](https://confluence.ihtsdotools.org/display/DOCGLOSS/edition) by definition include all their dependencies and therefore do not have a `sct:packageDependency` element.
+
+[Extension packages](https://confluence.ihtsdotools.org/display/DOCGLOSS/extension) always depend on other packages' content not included in the extension package and therefore always have a `sct:packageDependency` element.
+
+[Edition packages](https://confluence.ihtsdotools.org/display/DOCGLOSS/edition) and [Extension packages](https://confluence.ihtsdotools.org/display/DOCGLOSS/extension) can therefore be distinguished by the absence or presence of a `sct:packageDependency` element.
+
+Within a `sct:packageDependency` element
+- **sct:editionDependency** states any necessary edition dependency and version using the SNOMED CT URI standard, e.g. `http://snomed.info/sct/900000000000207008/version/20220731`. Where a package is transitively dependent on multiple edition, only the direct non-transitive dependencies should be stated. Downloading packages would complete when there are no further dependencies.
 - **sct:derivativeDependency** states any necessary derivative dependency, as they are often published outside of SNOMED CT editions. Similarly, this should also follow the SNOMED CT URI standard for module and version
 
 ## Authentication
