@@ -54,7 +54,7 @@
         <ncts:contentItemVersion>http://snomed.info/sct/450829007/version/20221031</ncts:contentItemVersion>
         <sct:packageDependency>
             <sct:editionDependency>http://snomed.info/sct/900000000000207008/version/20220731</sct:editionDependency>
-            <sct:derivativeDependency>http://snomed.info/sct/816211006/version/20220131 </sct:derivativeDependency>
+            <sct:derivativeDependency>http://snomed.info/sct/816211006/version/20220131</sct:derivativeDependency>
         </sct:packageDependency>
     </entry>
     <!--
