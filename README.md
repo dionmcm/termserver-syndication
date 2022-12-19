@@ -33,6 +33,15 @@ Within a `sct:packageDependency` element
 - **sct:editionDependency** states any necessary edition dependency and version using the SNOMED CT URI standard, e.g. `http://snomed.info/sct/900000000000207008/version/20220731`. Where a package is transitively dependent on multiple editions, only the direct non-transitive dependencies should be stated. Downloading packages would complete when there are no further dependencies.
 - **sct:derivativeDependency** states any necessary derivative dependency, as they are often published outside of SNOMED CT editions. Similarly, this should also follow the SNOMED CT URI standard for module and version
 
+### Snapshot Release Type for extension packages
+Extensions, as opposed to derivatives, add/modify core components - concepts, descriptions and axioms/relationships. These changes affect the Snapshot state of components, as well as potenitally affecting classification and Necessary Normal Form calculation (for example non-leaf concept addition).
+
+An Extension (adding/modifying core components) published as an extension package should only be a Delta or a Full [RF2 Release Type](https://confluence.ihtsdotools.org/display/DOCRELFMT/3.2+Release+Types). Such a package can be applied to a referenced base edition, and then a Snapshot calculated using the [Module Dependency Reference Set](https://confluence.ihtsdotools.org/display/DOCRELFMT/5.2.4.2+Module+Dependency+Reference+Set). Because an Extension affects the Snapshot state in this way, potentially requiring reclassification and Necessary Normal Form recalculation, a Snapshot extension package of an Extension cannot be simply appended to a base edition's Snapshot. For this reason, the Snapshot Release Type for extension packages of SNOMED CT Extensions should not be used.
+
+In the simpler Derivative case (map, refset, even language translation with additional descriptions) a Snapshot extension package being simply appended to a Snapshot base edition is safe and simple because the derivative simply adds new components and does not affect the state of existing components.
+
+The Snapshot Release Type for an edition package does not have these issues as the base edition content is included in the resolved Snapshot Release Type of the package.
+
 ## Authentication
 The standard does not mandate any authentication and this is left to the implementer of the Atom feed provider to implement whatever is needed depending on any terminology product license requirements.
 
