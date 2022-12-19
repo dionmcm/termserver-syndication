@@ -33,6 +33,20 @@ Within a `sct:packageDependency` element
 - **sct:editionDependency** states any necessary edition dependency and version using the SNOMED CT URI standard, e.g. `http://snomed.info/sct/900000000000207008/version/20220731`. Where a package is transitively dependent on multiple editions, only the direct non-transitive dependencies should be stated. Downloading packages would complete when there are no further dependencies.
 - **sct:derivativeDependency** states any necessary derivative dependency, as they are often published outside of SNOMED CT editions. Similarly, this should also follow the SNOMED CT URI standard for module and version
 
+### Edition/Extension/Derivative feeds
+While all types of entries can be put into one feed, it is also possible to host these entries in separate feeds. For examples
+- an editions feed - edition packages of available SNOMED CT Editions/Extensions
+- an extensions feed - extension packages of available SNOMED CT Extensions
+- a derivatives feed - extension packages of available SNOMED CT Derivatives
+
+Given that most implementers prefer a ready to use package to parts and assembly instructions, most implementers will be interested in edition packages rather than extension packages.
+
+Providing a feed containing only edition packages without extension packages would be the least confusing entry point for most implementers with the least learning and decision making required.
+
+Additional feeds for extension packages and derivatives would be useful for other implementations and are still worth providing.
+
+A complete feed that is the union of these three feeds can also be potentially provided.
+
 ## Authentication
 The standard does not mandate any authentication and this is left to the implementer of the Atom feed provider to implement whatever is needed depending on any terminology product license requirements.
 
